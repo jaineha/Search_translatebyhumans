@@ -1,0 +1,58 @@
+<mat-card class='main'>
+    <mat-card>
+        <div class="row">
+            <span class="label">
+                By Title
+            </span>
+            <hr>
+        </div>
+        <div class="row outer">
+            <div class="col-md-3 inner">
+                <mat-label class="sublabel">Title:</mat-label>
+                <input matInput [(ngModel)]="title" name="title">
+            </div>
+            <div class="col-md-3 inner">
+                <mat-label class="sublabel">Year:</mat-label>
+                <input matInput [(ngModel)]="year" name="year">
+            </div>
+            <div class="col-md-2 inner">
+                <mat-label class="col-md-2 sublabel">Plot:</mat-label>
+                <select  class="col-md-6" [(ngModel)]="plot" name="plot">
+                    <option  *ngFor="let plot of plotData" [value]="plot">
+                        {{plot}}
+                    </option>
+                </select>
+            </div>
+            <div class="col-md-2 inner">
+                <mat-label class="col-md-4 sublabel">Response:</mat-label>
+                <select class="col-md-6" [(ngModel)]="response">
+                    <option  *ngFor="let response of responseData" [value]="response">
+                        {{response}}
+                    </option>
+                </select>
+            </div>
+            <div class="col-md-1 inner">
+                <button id="submit" mat-stroked-button color="primary" class="mat-primary search" (click)="search()">Search</button>
+            </div>
+            <div class="col-md-1 inner">
+                <button id="submit" mat-stroked-button color="primary" class="mat-primary" (click)="reset()">Reset</button>
+            </div>
+        </div>
+    </mat-card>
+    <mat-card *ngIf= searchActive>
+        <div class="row">
+            Request:
+        </div>
+        <mat-card class="request">
+            {{url}}
+        </mat-card>
+    </mat-card>
+    <mat-card *ngIf= searchActive>
+        <div class="row">
+            Response:
+        </div>
+        <mat-card [ngClass]=" result ? 'greenCard':'none'">
+            {{result}}
+        </mat-card>
+    </mat-card>
+</mat-card>

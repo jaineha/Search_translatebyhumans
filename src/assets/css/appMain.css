@@ -1,0 +1,59 @@
+
+input{
+    background-color: transparent;
+    border: 1px solid #017980;
+    line-height: 2rem;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    text-align: center;
+    color: black;
+}
+
+input:focus{
+    outline: none;
+}
+
+input.mat-input-element{
+    border: 1px solid #017980;
+    background-color: white;
+}
+
+
+button:focus {
+    background-color: #006687;
+    outline: 1px solid transparent;
+    border-radius: 0%;
+    color: white !important;
+    font-size: 1.2rem;
+  }
+
+.mat-stroked-button.active {
+    border: 1px solid #006687;
+    border-radius: 0%;
+  }
+  
+.mat-stroked-button:hover {
+    background-color: #006687;
+  }
+  
+.mat-stroked-button:not([disabled]) {
+    border: 1px solid none;
+    border-radius: 0%;
+  }
+  
+.mat-button .mat-primary, .mat-stroked-button.mat-primary {
+    color: black;
+    font-size: 1.2rem;
+    border: 1px solid transparent;
+  }
+  
+.mat-button .mat-primary:hover, .mat-stroked-button.mat-primary:hover {
+    color: white;
+    font-size: 1.2rem;
+  }
+
+.mat-stroked-button {
+    padding: 0 5px;
+    line-height: 22px;
+}
+
